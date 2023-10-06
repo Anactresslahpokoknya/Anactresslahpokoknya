@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <style>
+      body{
+        background: rgb(255, 255, 255)
+      }
+      h1{
+        justify-content: center
+        padding: 100px 0 10px 0;
+        display:flex;
+      }
+      header{
+        font-size: 27px;
+        justify-content: center
+        padding: 100px 0 10px 0;
+        display:flex;
+      }
         .topnav {
   background-color: #333;
   overflow: hidden;
 }
 body{
-    background-image: url("b.jpg");
+    background-image: url("#");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,8 +59,13 @@ body{
   <a class="active" href="#">Lapor</a>
   <a href="{{url('masyarakat')}}">Masyarakat</a>
   <a href="{{url('pengaduan')}}">Pengaduan</a>
-  <a href="#about">Petugas</a>
-  <a href="#about">Tanggapan</a>
+  <a href="{{url('petugas')}}">Petugas</a>
+  <a href="{{url('tanggapan')}}">Tanggapan</a>
+</div>
+<div>
+  <h1>Lapor!</h1>
+  <header>Layanan Aspirasi dan Pengaduan Online Rakyat
+    Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</header>
 </div>
 </body>
 </html>

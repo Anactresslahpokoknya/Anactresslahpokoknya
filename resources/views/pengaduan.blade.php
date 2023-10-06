@@ -129,18 +129,18 @@ a {
 </p>
     <hr>
 
-    <label for="email"><b>Id Pengaduan</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <label for="id_pengaduan"><b>Id Pengaduan</b></label>
+    <input type="text" placeholder="Enter Id" name="id_pengaduan" id="id_pengaduan" required>
 
-    <label for="psw"><b>Tgl Pengaduan</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <label for="tgl_pengaduan"><b>Tgl Pengaduan</b></label>
+    <input type="date" placeholder="Enter " name="tgl_pengaduan" id="tgl_pengaduan" required><hr>
 
-    <label for="psw-repeat"><b>Nik</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <label for="nik"><b>Nik</b></label>
+    <input type="text" placeholder="Enter Nike" name="nik" id="nik" required>
     <hr>
 
-    <label for="psw-repeat"><b>Isi Laporan</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <label for="isi_laporan"><b>Isi Laporan</b></label>
+    <input type="text" placeholder="Enter " name="isi_laporan" id="isi_laporan" required>
     <hr>
 
    <b>Foto</b>
