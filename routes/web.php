@@ -48,3 +48,7 @@ use App\Http\Controllers\SantriController;
 Route::get('santri/tampil', [SantriController::class, 'tampilsantri'])->name('tampilsantri')->middleware('auth');
 Route::get('santri/tambah', [SantriController::class, 'tambahsantri'])->name('tambahsantri')->middleware('auth');
 Route::post('santri/simpan', [SantriController::class, 'simpansantri'])->name('simpansantri')->middleware('auth');
+
+Route::get('tanggapan', function () {
+    return view('/');
+});
