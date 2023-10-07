@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengaduan Masyarakat</title>
+    <a class="btn btn-success" href="{{route('tambahpengaduan')}}"><i class="fa fa-plus"></i> Tambah Pengaduan</a>
     <style>
         * {box-sizing: border-box}
 
@@ -121,48 +122,35 @@ a {
     </style>
 </head>
 <body>
-<form action="action_page.php">
-  <div class="container">
-    <h1>Sampaikan Laporan Anda</h1>
-    <p>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
-
-</p>
-    <hr>
-
-    <label for="id_pengaduan"><b>Id Pengaduan</b></label>
-    <input type="text" placeholder="Enter Id" name="id_pengaduan" id="id_pengaduan" required>
-
-    <label for="tgl_pengaduan"><b>Tgl Pengaduan</b></label>
-    <input type="date" placeholder="Enter " name="tgl_pengaduan" id="tgl_pengaduan" required><hr>
-
-    <label for="nik"><b>Nik</b></label>
-    <input type="text" placeholder="Enter Nike" name="nik" id="nik" required>
-    <hr>
-
-    <label for="isi_laporan"><b>Isi Laporan</b></label>
-    <input type="text" placeholder="Enter " name="isi_laporan" id="isi_laporan" required>
-    <hr>
-
-   <b>Foto</b>
-      <form action="/action_page.php">
-        <input type="file" id="myFile" name="filename">
-        <input type="submit">
-      </form><hr>
-
-      <b>Status</b>
-    <select>
-      <option value="0">Proses</option>
-      <option value="1">Selesai</option>
-    </select>
-  </div><hr>
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
-</form>
-</body>
-</html>
+  <h3>Form Input Pengaduan</h3>
+  <form method="post" action="{{route('simpanpengaduan')}}">
+    @csrf
+    <div class="form-group">
+      <label>Id Pengaduan</label>
+      <input type="id" name="id_pengaduan" class="form-control" placeholder="Id pengaduan" required="">
+    </div>
+    <div class="form-group">
+      <label>Tgl pengaduan</label>
+      <input type="date" name="tgl-pengaduan" class="form-control" placeholder="Tgl pengaduan" required="">
+    </div>
+    <div class="form-group">
+      <label>Nik</label>
+      <input type="text" name="nik" class="form-control" placeholder="Tanggapan" required="">
+    </div>
+    <div class="form-group">
+      <label>Isi laporan</label>
+      <input type="text" name="isi_laporan" class="form-control" placeholder="Id petugas" required="">
+    </div>
+    <div class="form-group">
+      <label>Foto</label>
+      <input type="file" name="foto" class="form-control" placeholder="Id petugas" required="">
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <input type="id" name="id_petugas" class="form-control" placeholder="Id petugas" required="">
+    </div>
+    <div class="form-group text-right">
+      <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan Data</button>
+    </div>
+  </form>
+  @endsection

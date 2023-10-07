@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MasyarakatController;
+use App\Http\Controllers\PengaduanController;
 use App\Models\Masyarakat;
 use Illuminate\Support\Facades\Route;
 
@@ -29,26 +30,12 @@ Route::get('pengaduan', function () {
     return view('pengaduan');
 });
 
-Route::get('petugas', function () {
-    return view('petugas');
-});
-
-Route::get('tanggapan', function () {
-    return view('tanggapan');
-});
-
 Route::get('masyarakat',[MasyarakatController::class,'index']);
 Route::get('registrasi',[MasyarakatController::class,'registrasi']);
 Route::post('simpan',[MasyarakatController::class,'simpan']);
 Route::get('masyarakat/login',[MasyarakatController::class,'Login']);
 Route::post('masyarakat/login',[MasyarakatController::class,'cekLogin']);
 
-use App\Http\Controllers\SantriController;
+Route::get('tampilpengaduan',[PengaduanController::class,'pengaduan']);
 
-Route::get('santri/tampil', [SantriController::class, 'tampilsantri'])->name('tampilsantri')->middleware('auth');
-Route::get('santri/tambah', [SantriController::class, 'tambahsantri'])->name('tambahsantri')->middleware('auth');
-Route::post('santri/simpan', [SantriController::class, 'simpansantri'])->name('simpansantri')->middleware('auth');
 
-Route::get('tanggapan', function () {
-    return view('/');
-});

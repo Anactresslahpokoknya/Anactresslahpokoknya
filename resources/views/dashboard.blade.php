@@ -57,10 +57,10 @@ body{
 <body>
 <div class="topnav">
   <a class="active" href="#">Lapor</a>
-  <a href="{{url('masyarakat')}}">Masyarakat</a>
+  <a href="">Masyarakat</a>
   <a href="{{url('pengaduan')}}">Pengaduan</a>
-  <a href="{{url('petugas')}}">Petugas</a>
-  <a href="{{url('tanggapan')}}">Tanggapan</a>
+  <a href="">Petugas</a>
+  <a href="">Tanggapan</a>
 </div>
 <div>
   <h1>Lapor!</h1>
